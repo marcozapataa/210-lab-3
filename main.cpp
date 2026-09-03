@@ -18,8 +18,18 @@ void outputRestaurant(const Restaurant &);
 
 int main()
 {
-    Restaurant userRest = inputRestaurant();
-    outputRestaurant(userRest);
+    // create 4 seperate restaurant objects
+    Restaurant Rest1 = inputRestaurant();
+    Restaurant Rest2 = inputRestaurant();
+    Restaurant Rest3 = inputRestaurant();
+    Restaurant Rest4 = inputRestaurant();
+
+    cout << "----- All Restaurants -----" << endl;
+    
+    outputRestaurant(Rest1);
+    outputRestaurant(Rest2);
+    outputRestaurant(Rest3);
+    outputRestaurant(Rest4);
 
     return 0;
 }
@@ -45,6 +55,8 @@ Restaurant inputRestaurant()
 
     cout << "Enter seating capacity: ";
     cin >> temp.seatingCapacity;
+
+    cin.ignore();
 
     // return the struct to the main
     return temp;
