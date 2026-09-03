@@ -19,16 +19,16 @@ int main()
 {
     Restaurant userRest = inputRestaurant();
 
-    
-
     return 0;
 }
 
 // inputRestaurant definition
 Restaurant inputRestaurant()
 {
+    // create temporary struct
     Restaurant temp;
 
+    // prompt user for input
     cout << "Enter restaurant name: ";
     getline(cin, temp.name);
 
@@ -44,5 +44,6 @@ Restaurant inputRestaurant()
     cout << "Enter seating capacity: ";
     cin >> temp.seatingCapacity;
 
+    // return the struct to the main
     return temp;
 }
