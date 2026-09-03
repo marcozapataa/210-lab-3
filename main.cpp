@@ -12,12 +12,14 @@ struct Restaurant
     int seatingCapacity;
 };
 
-//function prototype
+//function prototypes
 Restaurant inputRestaurant();
+void outputRestaurant(const Restaurant &);
 
 int main()
 {
     Restaurant userRest = inputRestaurant();
+    outputRestaurant(userRest);
 
     return 0;
 }
@@ -46,4 +48,14 @@ Restaurant inputRestaurant()
 
     // return the struct to the main
     return temp;
+}
+
+// function definition for outputRestaurant
+void outpuRestaurant(const Restaurant &r)
+{
+    cout << "\tRestaurant name: " << r.name << endl;
+    cout << "\tRestaurant address: " << r.address << endl;
+    cout << "\tRestaurant phone number: " << r.phoneNr << endl;
+    cout << "\tRestaurant rating: " << r.rating << endl;
+    cout << "\tRestaurant seating capacity: " << r.seatingCapacity << " seats" << endl;
 }
