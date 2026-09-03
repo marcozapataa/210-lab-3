@@ -51,8 +51,9 @@ Restaurant inputRestaurant()
 }
 
 // function definition for outputRestaurant
-void outpuRestaurant(const Restaurant &r)
+void outputRestaurant(const Restaurant &r)
 {
+    cout << "\t----Restaurant Info----" << endl;
     cout << "\tRestaurant name: " << r.name << endl;
     cout << "\tRestaurant address: " << r.address << endl;
     cout << "\tRestaurant phone number: " << r.phoneNr << endl;
